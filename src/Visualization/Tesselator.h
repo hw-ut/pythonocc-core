@@ -20,6 +20,7 @@
 #define TesselatorH
 //---------------------------------------------------------------------------
 #include <vector>
+#include <string>
 //---------------------------------------------------------------------------
 #include <gp_Pnt.hxx>
 #include <TopoDS_Shape.hxx>
@@ -98,6 +99,7 @@ Standard_EXPORT class Tesselator
       float* NormalsList();
       float* TextureCoordinatesList();
       void ExportShapeToJSON(char *filename);
+      std::string ExportShapeToX3DString();
       void ExportShapeToX3D(char *filename, int diffR=1, int diffG=0, int diffB=0);
       int ObjGetTriangleCount();
       int ObjGetVertexCount();
